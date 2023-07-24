@@ -1,7 +1,9 @@
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TimerScript : MonoBehaviour
 {
@@ -10,11 +12,40 @@ public class TimerScript : MonoBehaviour
     public float timer = 0;
     public float minuteCount = 0;
     public bool menuUp = false;
+    public bool gameFinish = false;
+    public TMP_Text scoreText;
+    public TMP_Text highText;
+    public TextAsset textFile;
+    public string highScoreText;
 
-    // Start is called before the first frame update
+
+    [SerializeField] private BoxCollider2D endLine;
+    [SerializeField] private GameObject endMenu;
+    [SerializeField] private GameObject end;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        gameFinish = true;
+        endMenu.SetActive(true);
+
+      if (timer < 10)
+        {
+            scoreText.text = minuteCount.ToString("F0") + ":" + "0" + timer.ToString("F0");
+        }
+        else
+        {
+            scoreText.text = minuteCount.ToString("F0") + ":" + timer.ToString("F0");
+        }
+        highText.text = textFile.text;
+        end.SetActive(false);
+    }
+
     void Start()
     {
         myTest.text = test;
+        highScoreText = textFile.text;
+        Debug.Log(highScoreText);
+        endMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,7 +59,7 @@ public class TimerScript : MonoBehaviour
             menuUp = true;
         }
 
-        if (menuUp == false)
+        if (menuUp == false || gameFinish == false)
         {
             if (timer >= 0)
             {

@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject wall;
     [SerializeField] private GameObject air;
     [SerializeField] private GameObject menu;
+    [SerializeField] private BoxCollider2D endLine;
 
 
 

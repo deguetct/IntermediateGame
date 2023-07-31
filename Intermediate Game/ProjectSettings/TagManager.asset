@@ -9,6 +9,9 @@ TagManager:
   - SuperJump
   - WallClimb
   - AirControl
+  - LeftCollider
+  - RightCollider
+  - Enemy
   layers:
   - Default
   - TransparentFX

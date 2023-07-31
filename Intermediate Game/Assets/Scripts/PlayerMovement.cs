@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public bool walls = false;
     public bool control = false;
     public bool menuUp = false;
+
+
 
     public SpriteRenderer spriteRenderer;
     public Sprite bootSprite;
@@ -40,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject air;
     [SerializeField] private GameObject menu;
     [SerializeField] private BoxCollider2D endLine;
+    [SerializeField] private GameObject dead;
+
+
 
 
 
@@ -72,6 +78,8 @@ public class PlayerMovement : MonoBehaviour
             Flip();
 
             MoveCamera();
+
+
 
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -218,6 +226,11 @@ public class PlayerMovement : MonoBehaviour
                 spriteRenderer3.sprite = controlSprite;
                 timeRemainingThree = 12;
             }
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            dead.SetActive(true);
         }
     }
 

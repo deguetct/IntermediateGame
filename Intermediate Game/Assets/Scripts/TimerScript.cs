@@ -59,40 +59,43 @@ public class TimerScript : MonoBehaviour
             menuUp = true;
         }
 
-        if (menuUp == false || gameFinish == false)
+        if (menuUp == false)
         {
-            if (timer >= 0)
+            if (gameFinish == false)
             {
-                timer += Time.deltaTime;
-                if (timer < 60 && minuteCount < 1)
+                if (timer >= 0)
                 {
-                    if (timer < 10)
+                    timer += Time.deltaTime;
+                    if (timer < 60 && minuteCount < 1)
                     {
-                        myTest.text = "0" + timer.ToString("F2");
-                    }
-                    else
-                    {
-                        myTest.text = timer.ToString("F2");
-                    }
+                        if (timer < 10)
+                        {
+                            myTest.text = "0" + timer.ToString("F2");
+                        }
+                        else
+                        {
+                            myTest.text = timer.ToString("F2");
+                        }
 
-                }
-                else if (timer >= 60)
-                {
-                    timer = timer - 60;
-                    minuteCount = minuteCount + 1;
-                    myTest.text = minuteCount.ToString("F0") + ":" + timer.ToString("F0");
-                }
-                else if (minuteCount >= 1)
-                {
-                    if (timer < 10)
-                    {
-                        myTest.text = minuteCount.ToString("F0") + ":" + "0" + timer.ToString("F0");
                     }
-                    else
+                    else if (timer >= 60)
                     {
+                        timer = timer - 60;
+                        minuteCount = minuteCount + 1;
                         myTest.text = minuteCount.ToString("F0") + ":" + timer.ToString("F0");
                     }
+                    else if (minuteCount >= 1)
+                    {
+                        if (timer < 10)
+                        {
+                            myTest.text = minuteCount.ToString("F0") + ":" + "0" + timer.ToString("F0");
+                        }
+                        else
+                        {
+                            myTest.text = minuteCount.ToString("F0") + ":" + timer.ToString("F0");
+                        }
 
+                    }
                 }
             }
         }

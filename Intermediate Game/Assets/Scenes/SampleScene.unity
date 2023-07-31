@@ -362,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97811673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.18, y: -2.34, z: 0}
+  m_LocalPosition: {x: 1.09, y: -0.17, z: 0}
   m_LocalScale: {x: 0.4351, y: 0.4351, z: 0.4351}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -668,7 +668,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &339707500
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1171,7 +1171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438883278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.87, y: -2.24, z: 0}
+  m_LocalPosition: {x: -0.31, y: -0.11, z: 0}
   m_LocalScale: {x: 0.07640724, y: 0.07640724, z: 0.07640724}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2547,7 +2547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003406380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -2.26, z: 0}
+  m_LocalPosition: {x: -1.39, y: -0.09, z: 0}
   m_LocalScale: {x: 0.1845, y: 0.1845, z: 0.1845}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2571,7 +2571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1126608502
 RectTransform:
   m_ObjectHideFlags: 0

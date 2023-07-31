@@ -15,6 +15,7 @@ public class GameMenu : MonoBehaviour
     [SerializeField] private GameObject newTitle;
     [SerializeField] private GameObject backButton;
     [SerializeField] private GameObject settingsButton;
+    [SerializeField] private GameObject restartButton;
 
     private bool settingsOpen = false;
 
@@ -25,6 +26,7 @@ public class GameMenu : MonoBehaviour
             titleOne.SetActive(false);
             homeButton.SetActive(false);
             settingsButton.SetActive(false);
+            restartButton.SetActive(false);
 
             newTitle.SetActive(true);
             backButton.SetActive(true);
@@ -34,6 +36,7 @@ public class GameMenu : MonoBehaviour
             titleOne.SetActive(true);
             homeButton.SetActive(true);
             settingsButton.SetActive(true);
+            restartButton.SetActive(true);
 
             newTitle.SetActive(false);
             backButton.SetActive(false);

@@ -17,6 +17,7 @@ public class TimerScript : MonoBehaviour
     public TMP_Text highText;
     public TextAsset textFile;
     public string highScoreText;
+    public float testing = 00.01f;
 
 
     [SerializeField] private BoxCollider2D endLine;
@@ -36,6 +37,7 @@ public class TimerScript : MonoBehaviour
         {
             scoreText.text = minuteCount.ToString("F0") + ":" + timer.ToString("F0");
         }
+        
         highText.text = textFile.text;
         end.SetActive(false);
     }

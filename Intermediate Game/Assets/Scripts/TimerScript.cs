@@ -31,11 +31,11 @@ public class TimerScript : MonoBehaviour
 
       if (timer < 10)
         {
-            scoreText.text = minuteCount.ToString("F0") + ":" + "0" + timer.ToString("F0");
+            scoreText.text = minuteCount.ToString("F0") + "." + "0" + timer.ToString("F2");
         }
         else
         {
-            scoreText.text = minuteCount.ToString("F0") + ":" + timer.ToString("F0");
+            scoreText.text = minuteCount.ToString("F0") + ". " + timer.ToString("F2");
         }
         
         highText.text = textFile.text;

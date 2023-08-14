@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
         if(rb.transform.position.y > (centerPosition + 4.5f))
         {
             centerPosition = centerPosition + 8f;
-            Debug.Log(centerPosition);
+
             Camera.main.transform.position = new Vector3(0, centerPosition, -10);
 
         }
@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
         if(rb.transform.position.y < (centerPosition - 4.5f))
         {
             centerPosition = centerPosition - 8f;
-            Debug.Log(centerPosition);
+
             Camera.main.transform.position = new Vector3(0, centerPosition, -10);
         }
     }

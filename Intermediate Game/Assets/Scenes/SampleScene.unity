@@ -1085,7 +1085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339707496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.88, y: -2.36, z: 0}
+  m_LocalPosition: {x: 5.15, y: 47.32, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1640,13 +1640,14 @@ MonoBehaviour:
   menuUp: 0
   gameFinish: 0
   scoreText: {fileID: 812431831}
-  highText: {fileID: 36831128}
-  textFile: {fileID: 4900000, guid: fb059ceebda0d0443876ae50daa77feb, type: 3}
-  highScoreText: 
   testing: 0.01
   endLine: {fileID: 428974532}
   endMenu: {fileID: 744863541}
   end: {fileID: 428974530}
+  scores: 0000000000000000000000000000000000000000
+  scoreFileName: HighScoresList.txt
+  teste: 1
+  testScore: 0
 --- !u!1 &438883278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,13 +2814,14 @@ GameObject:
   - component: {fileID: 744863542}
   - component: {fileID: 744863544}
   - component: {fileID: 744863543}
+  - component: {fileID: 744863545}
   m_Layer: 5
   m_Name: EndScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &744863542
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2882,6 +2884,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744863541}
   m_CullTransparentMesh: 1
+--- !u!114 &744863545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744863541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc2dfb461d69e043981f65caf443be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scores: 0000000000000000000000000000000000000000
+  scoreFileName: HighScoresList.txt
+  test: 1
+  testScore: 0
 --- !u!1 &745723122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5273,6 +5291,7 @@ GameObject:
   - component: {fileID: 1647362801}
   - component: {fileID: 1647362800}
   - component: {fileID: 1647362799}
+  - component: {fileID: 1647362802}
   m_Layer: 5
   m_Name: TimerText
   m_TagString: Untagged
@@ -5319,13 +5338,14 @@ MonoBehaviour:
   menuUp: 0
   gameFinish: 0
   scoreText: {fileID: 0}
-  highText: {fileID: 0}
-  textFile: {fileID: 0}
-  highScoreText: 
   testing: 0.01
   endLine: {fileID: 0}
-  endMenu: {fileID: 0}
+  endMenu: {fileID: 744863541}
   end: {fileID: 0}
+  scores: 0000000000000000000000000000000000000000
+  scoreFileName: HighScoresList.txt
+  teste: 1
+  testScore: 0
 --- !u!114 &1647362800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5368,6 +5388,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647362797}
   m_CullTransparentMesh: 1
+--- !u!114 &1647362802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647362797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc2dfb461d69e043981f65caf443be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scores: 0100000000000000000000000000000000000000
+  scoreFileName: HighScoresList.txt
+  test: 1
+  testScore: 0
 --- !u!1 &1828628847
 GameObject:
   m_ObjectHideFlags: 0

@@ -115,6 +115,11 @@ public class HighScores : MonoBehaviour
         scores[desiredIndex] = newScore;
         Debug.Log("Score of " + newScore + " entered into high scores at position " + desiredIndex, this);
     }
+    //Game finish
+    //get time
 
+    //create array with length of 5
+    //compare time with previous times
+    //place accordingly
 }
 
